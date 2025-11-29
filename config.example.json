@@ -1,0 +1,35 @@
+{
+  "qbittorrent": {
+    "host": "http://127.0.0.1",
+    "port": 8080,
+    "username": "admin",
+    "password": "adminadmin",
+    "verify_ssl": false
+  },
+  "web_modes": [
+    {
+      "name": "KamePT",
+      "pattern": "https?://kamept\\.com/details\\.php\\?id=\\d+",
+      "template": "{value}",
+      "description": "注释里直接填KamePT详情链接",
+      "cookie": ""
+    },
+    {
+      "name": "M-Team",
+      "pattern": "(?P<tid>\\d{3,})",
+      "template": "https://kp.m-team.cc/detail/{tid}",
+      "description": "注释填数字ID自动拼接M-Team详情页",
+      "cookie": ""
+    }
+  ],
+  "ui": {
+    "refresh_interval_sec": 0,
+    "require_category_selection": false,
+    "auto_scale_web": false,
+    "shortcut_up": "W",
+    "shortcut_down": "S",
+    "shortcut_copy": "D"
+  },
+  "active_web_mode": null
+}
+
